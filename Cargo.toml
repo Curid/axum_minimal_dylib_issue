@@ -1,0 +1,19 @@
+[package]
+name = "axum_dylib"
+version = "0.1.0"
+edition = "2021"
+
+
+[[bin]]
+name = "main"
+path = "./main.rs"
+
+
+[dependencies]
+axum = "0.6.9"
+libloading = "0.7.4"
+tokio = { version = "1.26.0", features = ["rt", "rt-multi-thread", "macros"] }
+
+
+[workspace]
+members = ["dylib"]
